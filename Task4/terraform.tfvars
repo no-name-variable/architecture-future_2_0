@@ -1,0 +1,14 @@
+cloud_id       = "b1gxxxxxxxxxxxxxxxxx"
+folder_id      = "b1gxxxxxxxxxxxxxxxxx"
+zone           = "ru-central1-a"
+environment    = "dev"
+subnet_cidr    = "10.20.0.0/24"
+image_id       = "fd8xxxxxxxxxxxxxxxxx"
+cores          = 2
+memory         = 4
+core_fraction  = 100
+disk_size      = 30
+disk_type      = "network-ssd"
+enable_nat     = true
+ssh_user       = "ubuntu"
+ssh_public_key = "ssh-ed25519 AAAA_REPLACE_WITH_PUBLIC_KEY student@future20"
