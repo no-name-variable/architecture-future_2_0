@@ -29,5 +29,7 @@ terraform plan -out=tfplan
 terraform apply tfplan
 ```
 
-После запуска с реальными `cloud_id`, `folder_id`, `image_id`, SSH-ключом и
-`YC_TOKEN` скриншот успешного `terraform apply` сохраняется как `apply-result.png`.
+Если `image_id = null`, Terraform автоматически выбирает актуальный публичный образ
+семейства `ubuntu-2204-lts`. После запуска с реальными `cloud_id`, `folder_id`,
+SSH-ключом и учётными данными Yandex Cloud скриншот успешного `terraform apply`
+сохраняется как `apply-result.png`.

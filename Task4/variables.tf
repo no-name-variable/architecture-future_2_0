@@ -27,8 +27,16 @@ variable "subnet_cidr" {
 }
 
 variable "image_id" {
-  description = "Идентификатор загрузочного образа"
+  description = "Идентификатор загрузочного образа; null выбирает последний образ семейства image_family"
   type        = string
+  default     = null
+  nullable    = true
+}
+
+variable "image_family" {
+  description = "Семейство публичного образа для автоматического выбора"
+  type        = string
+  default     = "ubuntu-2204-lts"
 }
 
 variable "cores" {

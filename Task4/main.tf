@@ -15,6 +15,10 @@ provider "yandex" {
   zone      = var.zone
 }
 
+data "yandex_compute_image" "boot" {
+  family = var.image_family
+}
+
 resource "yandex_vpc_network" "platform" {
   name   = "future20-${var.environment}-network"
   labels = local.labels
@@ -32,7 +36,7 @@ resource "yandex_compute_disk" "boot" {
   zone     = var.zone
   type     = var.disk_type
   size     = var.disk_size
-  image_id = var.image_id
+  image_id = var.image_id != null ? var.image_id : data.yandex_compute_image.boot.id
   labels   = local.labels
 }
 
