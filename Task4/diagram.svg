@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="850" viewBox="0 0 1400 850">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#334155"/></marker>
+    <style>
+      .title{font:700 30px Arial;fill:#0f172a}.h{font:700 20px Arial;fill:#0f172a}.t{font:16px Arial;fill:#1e293b}.small{font:14px Arial;fill:#475569}.managed{fill:#dcfce7;stroke:#16a34a;stroke-width:3}.manual{fill:#fef3c7;stroke:#d97706;stroke-width:3}.cloud{fill:#eff6ff;stroke:#2563eb;stroke-width:3}.edge{stroke:#334155;stroke-width:3;fill:none;marker-end:url(#arrow)}
+    </style>
+  </defs>
+  <rect width="1400" height="850" fill="#f8fafc"/>
+  <text x="700" y="55" text-anchor="middle" class="title">Автоматизация развёртывания «Будущее 2.0»</text>
+
+  <rect x="60" y="110" width="300" height="140" rx="18" class="manual"/>
+  <text x="210" y="150" text-anchor="middle" class="h">Инженер / CI</text>
+  <text x="210" y="185" text-anchor="middle" class="t">terraform init</text>
+  <text x="210" y="214" text-anchor="middle" class="t">plan → apply</text>
+
+  <rect x="550" y="100" width="790" height="660" rx="24" class="cloud"/>
+  <text x="945" y="140" text-anchor="middle" class="h">Yandex Cloud: ресурсы под управлением Terraform</text>
+
+  <rect x="610" y="190" width="300" height="115" rx="16" class="managed"/>
+  <text x="760" y="232" text-anchor="middle" class="h">VPC Network</text>
+  <text x="760" y="266" text-anchor="middle" class="small">yandex_vpc_network</text>
+
+  <rect x="1000" y="190" width="280" height="115" rx="16" class="managed"/>
+  <text x="1140" y="232" text-anchor="middle" class="h">Subnet</text>
+  <text x="1140" y="266" text-anchor="middle" class="small">10.20.0.0/24</text>
+
+  <rect x="610" y="400" width="300" height="125" rx="16" class="managed"/>
+  <text x="760" y="442" text-anchor="middle" class="h">Boot Disk</text>
+  <text x="760" y="477" text-anchor="middle" class="t">network-ssd, 30 ГБ</text>
+
+  <rect x="1000" y="390" width="280" height="250" rx="16" class="managed"/>
+  <text x="1140" y="435" text-anchor="middle" class="h">Compute VM</text>
+  <text x="1140" y="474" text-anchor="middle" class="t">2 vCPU / 4 ГБ</text>
+  <text x="1140" y="506" text-anchor="middle" class="t">Boot Disk</text>
+  <text x="1140" y="538" text-anchor="middle" class="t">NIC → Subnet</text>
+  <text x="1140" y="570" text-anchor="middle" class="t">NAT IP</text>
+  <text x="1140" y="605" text-anchor="middle" class="small">SSH public key metadata</text>
+
+  <rect x="60" y="430" width="300" height="155" rx="18" class="manual"/>
+  <text x="210" y="474" text-anchor="middle" class="h">Ручная подготовка</text>
+  <text x="210" y="510" text-anchor="middle" class="t">Cloud / Folder</text>
+  <text x="210" y="540" text-anchor="middle" class="t">IAM-токен и SSH-ключ</text>
+
+  <path d="M360 180 H520 V245 H610" class="edge"/>
+  <path d="M910 247 H1000" class="edge"/>
+  <path d="M910 463 H1000" class="edge"/>
+  <path d="M1140 305 V390" class="edge"/>
+  <path d="M360 508 H470 V700 H980 V590 H1000" class="edge"/>
+
+  <rect x="80" y="700" width="34" height="26" class="managed"/><text x="130" y="720" class="small">Terraform-managed</text>
+  <rect x="280" y="700" width="34" height="26" class="manual"/><text x="330" y="720" class="small">создаётся/задаётся вручную</text>
+</svg>
