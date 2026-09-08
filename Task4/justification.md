@@ -33,3 +33,7 @@ terraform apply tfplan
 семейства `ubuntu-2204-lts`. После запуска с реальными `cloud_id`, `folder_id`,
 SSH-ключом и учётными данными Yandex Cloud скриншот успешного `terraform apply`
 сохраняется как `apply-result.png`.
+
+Конфигурация проверена полным циклом: `plan → apply → destroy`. Применение успешно
+создало четыре ресурса, а подтверждение сохранено в `apply-result.png`. После проверки
+стенд полностью удалён.

@@ -15,7 +15,7 @@
 
 ## Проверка перед сдачей
 
-- `terraform fmt -check` и `terraform validate` выполнены успешно.
-- В `Task4/terraform.tfvars` нужно подставить идентификаторы своего Yandex Cloud и
-  публичный SSH-ключ, выполнить `terraform plan` и `terraform apply`.
-- Скриншот успешного применения нужно сохранить как `Task4/apply-result.png`.
+- `terraform fmt -check`, `terraform validate`, `terraform plan` и
+  `terraform apply` выполнены успешно в Yandex Cloud.
+- Подтверждение применения сохранено в `Task4/apply-result.png`.
+- После проверки учебные облачные ресурсы удалены командой `terraform destroy`.
